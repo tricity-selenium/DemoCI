@@ -4,7 +4,6 @@ import {LoginPage} from '../../pages/loginpage'
 import { ProductPage } from '../../pages/productspage'
 
 test('Product Test', async ({page, loginpage, productpage})=>{
-
    
     await loginpage.openwebsite();
     await page.waitForTimeout(1000);
