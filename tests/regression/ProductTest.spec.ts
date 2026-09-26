@@ -1,7 +1,7 @@
 //import {test, expect} from '@playwright/test'
-import {test} from '../fixtures/pageobjectfixrure'
-import {LoginPage} from '../pages/loginpage'
-import { ProductPage } from '../pages/productspage'
+import {test} from '../../fixtures/pageobjectfixrure'
+import {LoginPage} from '../../pages/loginpage'
+import { ProductPage } from '../../pages/productspage'
 
 test('Product Test', async ({page, loginpage, productpage})=>{
    
