@@ -8,6 +8,6 @@ test('LoginValidation', async ({page})=>{
     await page.waitForTimeout(2000);
     await loginobj.doLogin();
 
-    await page.waitForTimeout(3000);
+    await page.waitForTimeout(2000);
 
 })
