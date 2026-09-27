@@ -3,10 +3,12 @@ on:
   workflow_dispatch:
     inputs:
       tag:
-        description: 'enter your tag'
+        description: 'Select your tag'
         required: true
-        default: 'smoke'
-        type: string  
+        type: choice
+        options: 
+          - '@smoke'
+          - '@regression'  
 
 jobs:
   test:
