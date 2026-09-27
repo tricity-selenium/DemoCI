@@ -3,7 +3,7 @@ import {test} from '../../fixtures/pageobjectfixrure'
 import {LoginPage} from '../../pages/loginpage'
 import { ProductPage } from '../../pages/productspage'
 
-test('Product Test', async ({page, loginpage, productpage})=>{
+test('@smoke Product Test', async ({page, loginpage, productpage})=>{
    
     await loginpage.openwebsite();
     await page.waitForTimeout(1000);

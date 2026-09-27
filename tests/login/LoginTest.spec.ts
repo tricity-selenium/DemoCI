@@ -1,7 +1,7 @@
 import {test, expect} from '@playwright/test'
 import { LoginPage } from '../../pages/loginpage'
 
-test('LoginValidation', async ({page})=>{
+test('@smoke LoginValidation', async ({page})=>{
 
     const loginobj = new LoginPage(page);
     await loginobj.openwebsite();

@@ -4,7 +4,7 @@ import {LoginPage} from '../../pages/loginpage'
 import { ProductDetails } from '../../pages/productdetailspage'
 import { ProductPage } from '../../pages/productspage'
 
-test('Product Details' , async ({page, loginpage, productpage, productdetails})=>{
+test('@regression Product Details' , async ({page, loginpage, productpage, productdetails})=>{
 
     await loginpage.openwebsite();
     await page.waitForTimeout(1000);
