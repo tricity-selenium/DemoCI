@@ -10,6 +10,9 @@ import { defineConfig, devices } from '@playwright/test';
 
  dotenv.config({ path: path.resolve(__dirname, `.env/.env.${environment}`) });
 
+ console.log(`Running tests on environment: ${environment}`);
+ console.log(`Base URL: ${process.env.BASE_URL}`);
+
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
