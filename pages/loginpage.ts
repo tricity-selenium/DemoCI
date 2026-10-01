@@ -1,6 +1,7 @@
 import {Page, Locator} from '@playwright/test'
 import { TestData } from '../testdata/testdata';
 
+
 export class LoginPage
 {
   page: Page;
