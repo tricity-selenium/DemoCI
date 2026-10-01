@@ -1,8 +1,17 @@
 name: Regression Tests
 on:
   workflow_dispatch:
-
+    
     inputs:
+      environment:
+        description: 'Select Environment'
+        required: true
+        type: choice
+        options:
+          - qa
+          - staging
+          - prod
+          
       tag:
         description: 'Select your Tag'
         required: true
@@ -26,9 +35,11 @@ jobs:
       run: npx playwright install --with-deps
     - name: Run Playwright tests
       run: npx playwright test --grep "${{inputs.tag}}"
+      env:
+          ENV: ${{ inputs.environment }}
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
-        name: regression-report
+        name: regression-report-${{ inputs.environment }}-${{ inputs.tag }}
         path: playwright-report/
         retention-days: 1
